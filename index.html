@@ -17,12 +17,17 @@
    </head>
 
    <body>
-      <h1>[cool video of the day]</h1>
+      <h1>[cool random video]</h1>
+      <p>no, you can't pause the video. go ahead try.</p>
+      <button class="refresh-btn" onClick="window.location.reload();">click for a new video</button>
       <div class="video-container">
          <div id="player"></div>
       </div>
 
       <script>
+         let videoArr = ['H3Y1qDmMcxM', '0FODZB3ofKo', '2GwddHr2c3U', 'FwRIMBMJj2s', 'kyXz50Rz_1E', 'h0-WO6xRbAo', '47LINF4pARQ', 'Hcv58qyS6xs', 'U8284fZiBwY']
+         let randomVid = videoArr[Math.floor(Math.random() * videoArr.length)];
+         
          var tag = document.createElement('script');
    
          tag.src = "https://www.youtube.com/iframe_api";
@@ -32,8 +37,8 @@
          var player;
          function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
-               videoId: '0FODZB3ofKo',
-               playerVars: { 'autoplay': 1, 'controls': 1, 'modestbranding': 1, 'loop': 1, 'playlist': '0FODZB3ofKo' },
+               videoId: randomVid,
+               playerVars: { 'autoplay': 1, 'controls': 1, 'modestbranding': 1, 'loop': 1, 'playlist': randomVid},
                events: {
                   'onReady': onPlayerReady,
                   'onStateChange': onPlayerStateChange
