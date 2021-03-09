@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "sass/styles.css",
+	"sources": [
+		"sass/styles.scss",
+		"sass/_base.scss"
+	],
+	"sourcesContent": [
+		"// Setting up a sass project for the first time. Keeping it simple.\r\n@import \"base\";",
+		"body {\r\n    background: #222222;\r\n}\r\n\r\n.video-container {\r\n    position: relative;\r\n    width: 100%;\r\n}\r\n\r\n.video-container iframe {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    border-radius: 16px;\r\n}\r\n\r\nh1 {\r\n    color: white;\r\n    text-align: center;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n}\r\n\r\n// Even more responsive.\r\n// .video-container::after {\r\n//     // padding-top: 56.25%; // 16:9 Video, 9 is 56.25% of 16\r\n//     display: block;\r\n//     content: '';\r\n// }"
+	],
+	"mappings": ";ACAA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,OAAQ;CACvB;;;AAED,AAAA,gBAAgB,CAAC;EACb,QAAQ,EAAE,QAAS;EACnB,KAAK,EAAE,IAAK;CACf;;;AAED,AAAiB,gBAAD,CAAC,MAAM,CAAC;EACpB,QAAQ,EAAE,QAAS;EACnB,GAAG,EAAE,CAAE;EACP,IAAI,EAAE,CAAE;EACR,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,KAAM;EACd,aAAa,EAAE,IAAK;CACvB;;;AAED,AAAA,EAAE,CAAC;EACC,KAAK,EAAE,KAAM;EACb,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,4BAA6B;CAC7C",
+	"names": []
+}
