@@ -14,7 +14,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 73vh;
     border-radius: 0 0 16px 16px;
 }
 
@@ -39,6 +39,10 @@ h1, p {
         cursor: pointer;   
         outline: none; 
     }
+}
+
+#twitter-pic {
+    width: 2em;
 }
 
 // Even more responsive.
