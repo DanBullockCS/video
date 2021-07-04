@@ -19,18 +19,32 @@
    <body>
       <h1>[cool random video]</h1>
       <p>no, you can't pause the video. go ahead try.</p>
-      <p>is a video not working? let me know: 
-         <br><a title="Dan's Twitter" href="https://twitter.com/DanBullockCS" target="_blank" rel="noopener"><img id="twitter-pic" src="https://i.imgur.com/aAPFgUF.png" alt="twitter-logo"></a>
-      </p>
+      <p>is a video not working? <a href="mailto:danbullockcs@gmail.com" data-content="please let me know:">please let me know:</a></p>
+
       <button class="refresh-btn" onClick="window.location.reload();">click for a new video</button>
       <div class="video-container">
          <div id="player"></div>
       </div>
 
+      <div class="bottom-stats" style="position: fixed; bottom: 10vh; left: 16px;">
+         <p>site video count: <span id="video-count"></span></p>
+      </div>
+
       <script>
          let videoArr = ['H3Y1qDmMcxM', '0FODZB3ofKo', '2GwddHr2c3U', 'FwRIMBMJj2s', 'kyXz50Rz_1E', 
                          'h0-WO6xRbAo', '47LINF4pARQ', 'Hcv58qyS6xs', 'U8284fZiBwY', '5qap5aO4i9A', 
-                         '6P3cdQGOziU', 'FSuPUTbC80A', 'Ygb2t4h0WQ4', 'Afu6qhq8Mzw', 'Sls5dX30klk']
+                         '6P3cdQGOziU', 'FSuPUTbC80A', 'Ygb2t4h0WQ4', 'Afu6qhq8Mzw', 'Sls5dX30klk',
+                         'OdAhrkg5Yn8', '114rxHa0qzo', 'k1BneeJTDcU', 'PtdOklQfZzc', '25jHkLvTRtA',
+                         'q-bxW8PuLfM', '6hxzRRIaUX0', '7uvXsgSI-n4', 'LYCdHzvByAA', 'jxnu9h0NRJo'];
+
+         // Display total videos on the site
+         let span = document.getElementById("video-count");
+         while( span.firstChild ) {
+            span.removeChild( span.firstChild );
+         }
+         span.appendChild( document.createTextNode(videoArr.length));
+
+
          let randomVid = videoArr[Math.floor(Math.random() * videoArr.length)];
          
          var tag = document.createElement('script');
